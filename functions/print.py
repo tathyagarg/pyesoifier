@@ -16,6 +16,11 @@ Which is `str().join("print")`
 Let a = 0x6e (110)
 => `str().join(map(chr, [a + 2, a + 4, a - 5, a, a + 6]))`
 
+Thus, we require `str`, `join`, `map`, `chr`, `a`, `+`, `-`, `2`, `4`, `5`, `6` in the code.
+`+` and `-` can be substitude to the `__add__` and `__sub__` methods respectively.
+
+=> `str().join(map(chr, [a.__add__(2), a.__add__(4), a.__sub__(5), a, a.__add__(6)]))`
 """
+
 
 PRINT = "print"
