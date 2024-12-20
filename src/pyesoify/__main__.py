@@ -1,23 +1,14 @@
-import ast
 import argparse
-from pyesoify.obfuscate import obfuscate
+import ast
+
+from pyesoify.esoterify import esoterify
+
 
 def get_code(fpath) -> str:
     with open(fpath, "r") as f:
         code = f.read()
 
     return code
-
-def esoterify(code: str, output: str) -> None:
-    import sys
-    if output:
-        sys.stdout = open(output, 'w')
-
-    print('__builtins__:', end='(')
-    for elem in ast.parse(code).body:
-        print(obfuscate(elem), end='')
-
-    print(')=__import__("builtins").__dict__')
 
 def main():
     parser = argparse.ArgumentParser(prog="pyesoify", description="Esoterify Python code")
@@ -31,4 +22,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
