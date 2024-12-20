@@ -13,7 +13,7 @@ def get_code(fpath) -> str:
 def main():
     parser = argparse.ArgumentParser(prog="pyesoify", description="Esoterify Python code")
     parser.add_argument("fpath", type=str, help="Path to the Python file to esoterify")
-    parser.add_argument("--output", type=str, help="Path to the output file", default='')
+    parser.add_argument("--output", type=str, help="Path to the output file", default=None)
 
     args = parser.parse_args()
 
