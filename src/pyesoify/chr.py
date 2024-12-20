@@ -20,9 +20,6 @@ Element at index 14 is `chr`, so we can get `chr` through:
 
 So, we only require `14` in the code.
 """
-import sys
-sys.path.append("..")
-
-from numbers import FOURTEEN
+from pyesoify.numbers import FOURTEEN
 
 CHR = f"__builtins__.__getitem__([*__builtins__.__iter__()].__getitem__({FOURTEEN}))"

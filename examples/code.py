@@ -1,2 +1,1 @@
-a = "anc"
-print(a)
+print("Hello World")

@@ -1,5 +1,5 @@
-import numbers
-from functions.chr import CHR 
+from pyesoify import numbers
+from pyesoify.chr import CHR 
 
 def make_string(text: str) -> str:
     requires_uppercase = text.lower() != text

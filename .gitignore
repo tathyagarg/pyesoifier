@@ -1,3 +1,7 @@
-__pycache__/*
-*/__pycache__/*
+__pycache__
 test.py  # test.py is the file that contains output from main.py, for me to ensure the code works.
+
+build
+dist
+pyesoify.egg-info
+.venv

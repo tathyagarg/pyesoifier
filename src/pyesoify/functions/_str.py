@@ -22,11 +22,8 @@ Let a = 0x73 (115)
 
 Thus, we require `chr`, `a` (115), `1` in this code.
 """
-from .chr import CHR
-import sys
-
-sys.path.append('..')
-from numbers import ONE, HUNDERED_FIFTEEN
+from pyesoify.chr import CHR
+from pyesoify.numbers import ONE, HUNDERED_FIFTEEN
 
 STR = f"__builtins__.__getitem__((aae:={HUNDERED_FIFTEEN},{CHR}(aae).__add__({CHR}(aae.__add__({ONE}))).__add__({CHR}(aae.__sub__({ONE})))).__getitem__({ONE}))"
 
