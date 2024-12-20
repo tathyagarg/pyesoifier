@@ -27,6 +27,13 @@ SEVEN = f"({INCREMENT})({SIX})"
 EIGHT = f"({INCREMENT})({SEVEN})"
 NINE = f"({INCREMENT})({EIGHT})"
 TEN = f"({INCREMENT})({NINE})"
+ELEVEN = f"({INCREMENT})({TEN})"
+TWELVE = f"({TWO}).__mul__({SIX})"
+THIRTEEN = f"({INCREMENT})({TWELVE})"
+
+OFFSETS = [
+    ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, ELEVEN, TWELVE, THIRTEEN
+]
 
 FOURTEEN = f"{TWO}.__mul__({SEVEN})" 
 FIFTEEN = f"({INCREMENT})({FOURTEEN})"
@@ -35,4 +42,7 @@ HUNDERED = f"{TEN}.__mul__({TEN})"
 HUNDERED_FIFTEEN = f"({HUNDERED}).__add__({FIFTEEN})"
 
 HUNDERED_TEN = f"(az:={TEN},az.__mul__(az).__add__(az)).__getitem__({ONE})"
+
+SEVENTY = f"{TEN}.__mul__({SEVEN})"
+SEVENTY_EIGHT = f"({SEVENTY}).__add__({EIGHT})"
 
