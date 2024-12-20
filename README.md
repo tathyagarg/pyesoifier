@@ -1,4 +1,4 @@
-# PyEsoifier
+# PyEsoify
 A simple python script to esotericify your python code.
 
 **Contrary to popular belief, using an obfuscator or a tool like this does not prevent your code from theft or reverse engineering. It only makes it harder to read. If someone really cared enough about your code to steal it (which they most likely don't!), an obfuscator will not stop them.**
