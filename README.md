@@ -1,7 +1,7 @@
-# PyObfs
-A simple python script to obfuscate your python code.
+# PyEsoifier
+A simple python script to esotericify your python code.
 
-**Contrary to popular belief, using an obfuscator does not prevent your code from theft or reverse engineering. It only makes it harder to read. If someone really cared enough about your code to steak it, an obfuscator will not stop them.**
+**Contrary to popular belief, using an obfuscator does not prevent your code from theft or reverse engineering. It only makes it harder to read. If someone really cared enough about your code to steal it, an obfuscator will not stop them.**
 So, this project is just for fun and educational purposes. It shows you how you can push python to its limits.
 
 ## Structure
