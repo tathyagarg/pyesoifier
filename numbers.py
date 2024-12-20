@@ -38,6 +38,8 @@ OFFSETS = [
 FOURTEEN = f"{TWO}.__mul__({SEVEN})" 
 FIFTEEN = f"({INCREMENT})({FOURTEEN})"
 
+STRONG = OFFSETS + [FOURTEEN, FIFTEEN]
+
 HUNDERED = f"{TEN}.__mul__({TEN})"
 HUNDERED_FIFTEEN = f"({HUNDERED}).__add__({FIFTEEN})"
 
@@ -45,4 +47,10 @@ HUNDERED_TEN = f"(az:={TEN},az.__mul__(az).__add__(az)).__getitem__({ONE})"
 
 SEVENTY = f"{TEN}.__mul__({SEVEN})"
 SEVENTY_EIGHT = f"({SEVENTY}).__add__({EIGHT})"
+
+def obfs_number(n: int) -> str:
+    if 1 <= n <= 15:
+        return STRONG[n - 1]
+    return ''
+
 

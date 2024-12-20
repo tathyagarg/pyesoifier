@@ -10,6 +10,10 @@ def make_string(text: str) -> str:
 
     results = []
     for char in text:
+        if char == ' ':
+            results.append(f"({numbers.TWO}).__pow__({numbers.FIVE})")
+            continue
+
         num = ord(char)
         if abs(num - 78) < abs(num - 110):
             base = 'gh' 

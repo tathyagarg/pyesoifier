@@ -5,12 +5,14 @@ from .print import PRINT
 from ._str import STR 
 from .chr import CHR
 from .getattr import GETATTR
+from .map import MAP
 
 SUPPORTED_FUNCTIONS: dict[str, str] = {
     'print': PRINT,
     'str': STR,
     'chr': CHR,
-    'getattr': GETATTR
+    'getattr': GETATTR,
+    'map': MAP,
 }
 
 def obfs_function(func_name: str) -> str:

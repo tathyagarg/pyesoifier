@@ -12,15 +12,16 @@ Which is `str().join("print")`
 => `str().join([chr(112), chr(114), chr(105), chr(110), chr(116)])`
 => `str().join(map(chr, [112, 114, 105, 110, 116]))`
 => `str().join(map(chr, [0x70, 0x72, 0x69, 0x6e, 0x74]))`
-
-Let a = 0x6e (110)
-=> `str().join(map(chr, [a + 2, a + 4, a - 5, a, a + 6]))`
-
-Thus, we require `str`, `join`, `map`, `chr`, `a`, `+`, `-`, `2`, `4`, `5`, `6` in the code.
-`+` and `-` can be substitude to the `__add__` and `__sub__` methods respectively.
-
-=> `str().join(map(chr, [a.__add__(2), a.__add__(4), a.__sub__(5), a, a.__add__(6)]))`
 """
+from ._str import STR
+from .getattr import GETATTR
+from .map import MAP
+from .chr import CHR
 
+import sys
+sys.path.append('..')
 
-PRINT = "print"
+from string_factory import make_string
+
+PRINT = f"__builtins__.__getitem__({make_string('print')})"
+
