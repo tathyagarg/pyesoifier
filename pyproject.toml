@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pyesoify"
-version = "0.2.2"
+version = "0.3.1"
 authors = [{ name = "Tathya Garg", email = "coding.tathya+gh@gmail.com" }]
 description = "A simple python package to convert python code to an esoteric form"
 readme = "README.md"

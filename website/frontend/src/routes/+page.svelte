@@ -19,7 +19,7 @@
       redirect: "follow",
     };
 
-    fetch("http://0.0.0.0:6060/translate", requestOptions)
+    fetch("https://api-pyesoify.tathya.hackclub.app/translate", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         text = result.code;
@@ -30,6 +30,13 @@
 
 <div id="main">
   <h1 id="header">Pyesoify - Make your code a mess.</h1>
+  <h2 id="subheader">
+    Make sure to read the <a
+      id="readme"
+      href="https://github.com/tathyagarg/pyesoify/blob/main/README.md#features"
+      >README</a
+    > to see compatible features.
+  </h2>
   <div id="boxes">
     <div>
       <textarea id="in"></textarea>
@@ -43,7 +50,7 @@
 
 <style>
   #main {
-    background-color: red;
+    background-color: var(--bg);
     height: 100vh;
 
     padding: 1%;
@@ -55,16 +62,30 @@
 
   #header {
     text-align: center;
-    line-height: 10vh;
+    font-size: 2em;
+    margin-bottom: 0;
+    margin-top: 1em;
+  }
+
+  #subheader {
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.25em;
+    color: var(--subtext);
+  }
+
+  #readme {
+    color: var(--accent);
   }
 
   #boxes {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90%;
+    height: 80%;
 
     gap: 2em;
+    padding-bottom: 1em;
   }
 
   #boxes > div {
@@ -82,6 +103,16 @@
     font-family: monospace;
     font-size: 2em;
     resize: none;
+
+    background-color: var(--base);
+    border-radius: 1%;
+    padding: 1%;
+    color: var(--text);
+  }
+
+  textarea:focus {
+    outline: 1px solid var(--accent);
+    box-shadow: 0 0 10px 1px var(--accent);
   }
 
   #esoify {
@@ -92,6 +123,16 @@
     font-size: 2em;
     padding: 0.5em 1em;
     border-radius: 1em;
+
+    background-color: var(--base);
+    color: var(--text);
+    cursor: pointer;
+
+    transition-duration: 0.1s;
+  }
+
+  #esoify:hover {
+    box-shadow: 0 0 10px 1px var(--accent);
   }
 
   h1 {

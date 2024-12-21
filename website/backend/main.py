@@ -32,8 +32,7 @@ def read_root(code: Code) -> dict[str, str]:
 
     out_file = OUTPUT_DIR / f'{fname}.py'
 
-    with open(out_file, 'w') as f:
-        pyesoify.esoterify(code.code, output=f)
+    pyesoify.esoterify(code.code, output=out_file.as_posix())
 
     with open(out_file, 'r') as f:
         out_code = f.read()
