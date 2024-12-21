@@ -1,4 +1,2 @@
-print('hello world')
-x = input('enter ')
-print(x)
-
+x = 1
+print(x + 1)

@@ -18,7 +18,7 @@ def obfuscate(elem):
     if isinstance(elem, ast.Expr):
         return obfuscate(elem.value)
     elif isinstance(elem, ast.Assign):
-        return f',{obfuscate(elem.targets[0])}:=({obfuscate(elem.value)})'
+        return f'{obfuscate(elem.targets[0])}:=({obfuscate(elem.value)})'
     elif isinstance(elem, ast.BinOp):
         return f"{obfuscate(elem.left)}.{operators.obfs_operator(elem.op)}({obfuscate(elem.right)})" 
     elif isinstance(elem, ast.Constant):

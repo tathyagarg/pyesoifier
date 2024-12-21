@@ -40,3 +40,8 @@ def read_root(code: Code) -> dict[str, str]:
     os.remove(out_file)
 
     return {'code': out_code}
+
+@app.get('/version')
+def get_version() -> dict[str, str]:
+    return {'version': pyesoify.__version__}
+
